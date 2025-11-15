@@ -11,12 +11,14 @@
 
 ## Development
 
-- `npm run dev`
+- Backend dev: `npm run dev`
+- UI dev: `cd ui && npm install && npm run dev`
 
 ## Build and Start
 
 - `npm run build`
 - `npm run start`
+ - UI build: `cd ui && npm run build` then `npm run preview`
 
 ## Environment Variables
 
@@ -29,3 +31,4 @@
 ## Configuration
 
 - Config loader: `src/config.ts`
+ - UI RBAC: Non-admins have read-only access and masked emails

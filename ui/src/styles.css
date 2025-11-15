@@ -1,0 +1,40 @@
+:root {
+  --bg: #0b0f14;
+  --card: #11161d;
+  --text: #e6edf3;
+  --muted: #9aa7b4;
+  --primary: #3b82f6;
+  --border: #1f2530;
+  --accent-deloitte: #86BC24;
+  --accent-ey: #FFE600;
+  --accent-kpmg: #00338D;
+  --accent-pwc: #E88D14;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+a { color: var(--text); text-decoration: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 10; }
+.brand { font-weight: 700; letter-spacing: 0.4px; }
+.navlinks { display: flex; gap: 12px; }
+.btn { background: var(--primary); color: white; border: 0; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
+.textarea { width: 100%; min-height: 180px; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
+.card { border: 1px solid var(--border); border-radius: 12px; background: var(--card); padding: 16px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; white-space: pre-wrap; word-break: break-word; }
+.list { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.list-item { display: flex; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.muted { color: var(--muted); }
+.hero { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: center; }
+.hero .title { font-size: 28px; font-weight: 800; }
+.hero .subtitle { color: var(--muted); margin-top: 6px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+
+/* Assurance banner inspired by Big Four color accents */
+.banner { position: sticky; top: 48px; z-index: 9; padding: 10px 16px 10px 20px; border-bottom: 1px solid var(--border); background: #0c1218; }
+.banner-assurance { position: relative; }
+.banner-assurance::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(var(--accent-deloitte), var(--accent-ey), var(--accent-kpmg), var(--accent-pwc)); }
+.banner-title { font-weight: 700; letter-spacing: 0.2px; }
+.banner-subtitle { color: var(--muted); margin-top: 2px; font-size: 13px; }

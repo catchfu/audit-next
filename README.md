@@ -149,3 +149,12 @@ Invoke-RestMethod -Uri "$base/evidence" -Method Get | ConvertTo-Json -Depth 6
 - SEC remote fetch `403`: Provide a descriptive `USER_AGENT` and respect rate limits; some SEC endpoints block scripted clients.
 - Missing API keys: Endpoints for Companies House, OpenSanctions, OpenCorporates will return descriptive errors until keys are set.
 - ESEF remote URLs: If the host blocks or is not reachable, use `content` parameter with the XHTML/iXBRL body.
+
+## UI
+
+- Frontend: React + Vite (TypeScript) in `ui/`
+- Auth: JWT stored in browser; route guards redirect unauthenticated users
+- RBAC: Admin-only pages and actions are enforced server-side and reflected in the UI
+- Assurance Mode banner: Big Four–inspired banner indicates read-only access for non-admins
+- Data masking: Non-admins see masked emails on the Users page
+- Run UI: `cd ui && npm install && npm run dev`
